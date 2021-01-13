@@ -32,12 +32,8 @@ public class Meat extends Material {
 
     @Override
     public double getRealMoney() {
-        if (getManufacturingDate().equals(getToday().plusDays(5))) {
-            return getAmount() * 0.3;
-        } else if (getManufacturingDate().equals(getToday().plusDays(3))) {
-            return getAmount() * 0.5;
-        } else {
-            return getAmount() * 0.1;
-        }
+        if (getManufacturingDate().equals(getToday().plusDays(5))) return getAmount() * 0.3;
+        else if (getManufacturingDate().equals(getToday().plusDays(3))) return getAmount() * 0.5;
+        else return getAmount() * 0.1;
     }
 }
