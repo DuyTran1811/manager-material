@@ -12,9 +12,12 @@ public abstract class Material implements Discount {
     public Material() {
     }
 
-    public Material(LocalDate today,String id,
-                    String name, LocalDate manufacturingDate, int cost) {
+    public Material(LocalDate today) {
         this.today = today;
+    }
+
+    public Material(String id,
+                    String name, LocalDate manufacturingDate, int cost) {
         this.id = id;
         this.name = name;
         this.manufacturingDate = manufacturingDate;

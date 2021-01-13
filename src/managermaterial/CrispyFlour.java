@@ -12,10 +12,9 @@ public class CrispyFlour extends Material {
         this.quantity = quantity;
     }
 
-    public CrispyFlour(LocalDate today,
-                       String id, String name,
+    public CrispyFlour(String id, String name,
                        LocalDate manufacturingDate, int cost, int quantity) {
-        super(today, id, name, manufacturingDate, cost);
+        super(id, name, manufacturingDate, cost);
         this.quantity = quantity;
     }
 
@@ -31,7 +30,7 @@ public class CrispyFlour extends Material {
 
     @Override
     public double getRealMoney() {
-        if (getManufacturingDate(). equals(getToday().plusMonths(4))) return getAmount() * 0.2;
+        if (getManufacturingDate().equals(getToday().plusMonths(4))) return getAmount() * 0.2;
         else if (getManufacturingDate().equals(getToday().plusMonths(2))) return getAmount() * 0.4;
         else return getAmount() * 0.05;
     }
